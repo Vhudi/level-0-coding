@@ -4,16 +4,22 @@
     var found = false;
     var count = 0;
     while (found == false) {
-      {
-        if (count == arrayCommon.length) {
-          arrayCommon.push(letter);
-          return;
-        }
-
-        if (letter === arrayCommon[count]) found = true;
-        else ++count;
+      if (count == arrayCommon.length) {
+        arrayCommon.push(letter);
+        return;
       }
+
+      if (letter === arrayCommon[count]) found = true;
+      else ++count;
     }
+  }
+
+  function buildWordsInCommon(arrayCommon) {
+    var output = "";
+    for (var i = 0; i < arrayCommon.length; i++)
+      if (i == arrayCommon.length - 1) output = output + arrayCommon[i] + ".";
+      else output = output + arrayCommon[i] + ", ";
+    return output;
   }
 
   function compareWords(baseWord, compareWord) {
@@ -36,17 +42,13 @@
         }
     }
 
-    for (var i = 0; i < charInCommon.length; i++) {
-      if (i == charInCommon.length - 1) output = output + charInCommon[i] + ".";
-      else output = output + charInCommon[i] + ", ";
-    }
     console.log(
       "Input: '" +
         baseWord +
         ", " +
         compareWord +
         "' Output: Common letters- '" +
-        output +
+        buildWordsInCommon(charInCommon) +
         "'"
     );
   }

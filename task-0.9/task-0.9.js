@@ -4,16 +4,23 @@
     var found = false;
     var counter = 0;
     while (found == false) {
-      {
-        if (counter == arrayVowel.length) {
-          arrayVowel.push(vowel);
-          return;
-        }
-
-        if (vowel === arrayVowel[counter]) found = true;
-        else ++counter;
+      if (counter == arrayVowel.length) {
+        arrayVowel.push(vowel);
+        return;
       }
+
+      if (vowel === arrayVowel[counter]) found = true;
+      else ++counter;
     }
+  }
+
+  function buildOutput(arrayList) {
+    var vowels = "";
+    for (var i = 0; i < arrayList.length; i++) {
+      if (i == arrayList.length - 1) vowels = vowels + arrayList[i] + ".";
+      else vowels = vowels + arrayList[i] + ", ";
+    }
+    return vowels;
   }
 
   function printVowels(word) {
@@ -45,12 +52,7 @@
           break;
       }
     }
-
-    for (var i = 0; i < vowelList.length; i++) {
-      if (i == vowelList.length - 1) vowels = vowels + vowelList[i] + ".";
-      else vowels = vowels + vowelList[i] + ", ";
-    }
-    console.log("Input: " + word + " Output: Vowels " + vowels);
+    console.log("Input: " + word + " Output: Vowels " + buildOutput(vowelList));
   }
-  // printVowels('"Umuzi"');
+  //printVowels('"Umuzi"');
 }
