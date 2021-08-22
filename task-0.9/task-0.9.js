@@ -1,6 +1,5 @@
 {
   function addVowel(vowel, arrayVowel) {
-    // this function checks if the vowel has already been scanned so there are no repetitions.
     var found = false;
     var counter = 0;
     while (found == false) {
@@ -54,5 +53,4 @@
     }
     console.log("Input: " + word + " Output: Vowels " + buildOutput(vowelList));
   }
-  //printVowels('"Umuzi"');
 }

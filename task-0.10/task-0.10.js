@@ -1,6 +1,5 @@
 {
   function addCharacter(letter, arrayCommon) {
-    // this function checks if the character has already been added so there are no repetitions.
     var found = false;
     var count = 0;
     while (found == false) {
@@ -52,5 +51,4 @@
         "'"
     );
   }
-  //compareWords("house", "computers");
 }
