@@ -16,7 +16,7 @@
   function buildOutput(arrayList) {
     var vowels = "";
     for (var i = 0; i < arrayList.length; i++) {
-      if (i == arrayList.length - 1) vowels = vowels + arrayList[i] + ".";
+      if (i == arrayList.length - 1) vowels = vowels + arrayList[i];
       else vowels = vowels + arrayList[i] + ", ";
     }
     return vowels;
@@ -51,6 +51,6 @@
           break;
       }
     }
-    console.log("Input: " + word + " Output: Vowels " + buildOutput(vowelList));
+    console.log("Vowels: " + buildOutput(vowelList));
   }
 }

@@ -16,7 +16,7 @@
   function buildWordsInCommon(arrayCommon) {
     var output = "";
     for (var i = 0; i < arrayCommon.length; i++)
-      if (i == arrayCommon.length - 1) output = output + arrayCommon[i] + ".";
+      if (i == arrayCommon.length - 1) output = output + arrayCommon[i];
       else output = output + arrayCommon[i] + ", ";
     return output;
   }
@@ -41,14 +41,6 @@
         }
     }
 
-    console.log(
-      "Input: '" +
-        baseWord +
-        ", " +
-        compareWord +
-        "' Output: Common letters- '" +
-        buildWordsInCommon(charInCommon) +
-        "'"
-    );
+    console.log("Common letters: '" + buildWordsInCommon(charInCommon) + "'");
   }
 }
