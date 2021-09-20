@@ -8,3 +8,5 @@
     return max;
   }
 }
+
+console.log(findMaxValue(4, 5, 6, 77, 8));

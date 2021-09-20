@@ -4,3 +4,6 @@
     else console.log("even");
   }
 }
+
+//evenOrOdd(3);
+//evenOrOdd(4);
